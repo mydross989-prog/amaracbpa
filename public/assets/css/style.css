@@ -1,0 +1,288 @@
+/* 
+   Amarac BPA Design System - Enhanced Gusto Edition
+*/
+
+:root {
+    --primary: #F45D48;
+    --primary-hover: #d84b38;
+    --secondary: #00C2A0;
+    --navy: #222525;
+    --cream: #FFF2DF;
+    --light-bg: #F8F5F2;
+    --white: #ffffff;
+    --text-main: #222525;
+    --text-muted: #5b5e5e;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* Top Notification Banner */
+.top-notice-bar {
+    background-color: #fef4e8;
+    color: #222525;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f9dabf;
+}
+
+.top-notice-bar a {
+    color: var(--primary);
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+/* Header & Navigation */
+.navbar {
+    padding: 1rem 0;
+    background: var(--white);
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky-top {
+    box-shadow: var(--shadow-soft);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand span {
+    color: var(--primary);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--navy) !important;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background-color: var(--light-bg);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--cream);
+    padding: 80px 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+/* Trust Section */
+.trust-section {
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+    background: var(--white);
+}
+
+.trust-logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    opacity: 0.7;
+}
+
+.trust-logo-card {
+    text-align: center;
+    max-width: 150px;
+}
+
+.trust-logo-card h6 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    color: #888;
+}
+
+/* Product Spotlight Section */
+.spotlight-section {
+    padding: 100px 0;
+}
+
+.spotlight-row {
+    margin-bottom: 100px;
+}
+
+.spotlight-row:last-child {
+    margin-bottom: 0;
+}
+
+.spotlight-image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Pricing Section */
+.pricing-section {
+    background-color: #fafbfc;
+    padding: 100px 0;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--primary);
+    position: relative;
+}
+
+.pricing-card.popular::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+}
+
+/* Modules Grid */
+.module-card {
+    background: var(--white);
+    border: none;
+    border-radius: 16px;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+    display: block;
+    color: var(--text-main);
+}
+
+.module-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    color: var(--text-main);
+}
+
+/* Footer */
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 80px 0 40px;
+}
+
+.footer-link {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 991px) {
+    .trust-logo-grid {
+        gap: 20px;
+    }
+}

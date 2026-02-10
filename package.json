@@ -1,0 +1,17 @@
+{
+  "name": "amarac-bpa",
+  "version": "1.0.0",
+  "description": "Amarac BPA Solutions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lowdb": "^1.0.0"
+  }
+}
